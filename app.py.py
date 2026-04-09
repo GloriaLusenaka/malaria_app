@@ -103,10 +103,10 @@ with col7:
     
     # Risk ratio by region
     if 'Region' in filtered_df.columns and 'Diagnosis' in filtered_df.columns:
-        region_risk = filtered_df.groupby('Region').apply(
-            lambda x: (x['Diagnosis'] == 'Malaria').mean()
-        ).max()
-        st.metric("Highest Risk Region", region_risk.nlargest(1).index[0] if len(region_risk) > 0:
-    st.metric("Highest Risk Region", region_risk.nlargest(1).index[0])
-else:
-    st.metric("Highest Risk Region", "No Data")
+    region_risk = filtered_df.groupby('Region').apply(
+        lambda x: (x['Diagnosis'] == 'Malaria').mean()
+    )
+    if len(region_risk) > 0:
+        st.metric("Highest Risk Region", region_risk.nlargest(1).index[0])
+    else:
+        st.metric("Highest Risk Region", "No Data")
