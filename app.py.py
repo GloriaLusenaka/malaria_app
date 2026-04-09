@@ -106,8 +106,7 @@ with col7:
         region_risk = filtered_df.groupby('Region').apply(
             lambda x: (x['Diagnosis'] == 'Malaria').mean()
         ).max()
-        st.metric("Highest Risk Region", region_risk.nlargest(1).index[0] if len(region_risk) > 0 else "N/A")
-
-# Footer
-st.markdown("---")
-st.caption("Data Source: Kenya DHS 2022 | Bayesian Geospatial Analysis")
+        st.metric("Highest Risk Region", region_risk.nlargest(1).index[0] if len(region_risk) > 0:
+    st.metric("Highest Risk Region", region_risk.nlargest(1).index[0])
+else:
+    st.metric("Highest Risk Region", "No Data")
