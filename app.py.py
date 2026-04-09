@@ -9,7 +9,7 @@ import numpy as np
 st.set_page_config(page_title="Malaria Analysis Kenya", layout="wide")
 
 # Title
-st.title("🦟 Bayesian Geospatial Analysis of Malaria Incidence in Kenya")
+st.title("Bayesian Geospatial Analysis of Malaria Incidence in Kenya🦟")
 st.markdown("---")
 
 # Load data
